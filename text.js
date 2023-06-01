@@ -53,7 +53,7 @@
   // @ts-expect-error
   if (!renderer.exports || !renderer.exports.Skin || !vm.exports) {
     alert('VM is too old for animated text extension');
-    throw new Error('renderer.exports: ', renderer.exports, ' renderer.exports.Skin:' renderer.exports.Skin, ' vm.exports:', vm.exports);
+    throw new Error('VM is too old');
   }
 
   /** @type {typeof RenderWebGL.Skin} */
