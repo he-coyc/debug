@@ -51,10 +51,10 @@
 
   // temporary
   // @ts-expect-error
-  //if (!renderer.exports || !renderer.exports.Skin || !vm.exports) {
-  //  alert('VM is too old for animated text extension');
-  //  throw new Error('renderer.exports: ', renderer.exports, ' renderer.exports.Skin:' renderer.exports.Skin, ' vm.exports:', vm.exports);
-  //}
+  if (!renderer.exports || !renderer.exports.Skin || !vm.exports) {
+    alert('VM is too old for animated text extension');
+    throw new Error('renderer.exports: ', renderer.exports, ' renderer.exports.Skin:' renderer.exports.Skin, ' vm.exports:', vm.exports);
+  }
 
   /** @type {typeof RenderWebGL.Skin} */
   // @ts-expect-error - exports not typed yet
